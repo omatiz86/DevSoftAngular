@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { User } from 'src/app/core/interface/user.interface';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -16,12 +15,7 @@ export class LocalStorageService {
    *
    * @returns
    */
-  public getUserStorage(): User {
-    let _storage: User = JSON.parse(
-      this._localStorage.getItem(environment.userStorage) || ''
-    );
-    return _storage;
-  }
+  
 
   /**
    *
